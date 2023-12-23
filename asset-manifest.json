@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Typesense-Movie-App/static/css/main.1c4880a5.css",
+    "main.js": "/React-Typesense-Movie-App/static/js/main.a56421ff.js",
+    "static/js/787.cfacd627.chunk.js": "/React-Typesense-Movie-App/static/js/787.cfacd627.chunk.js",
+    "index.html": "/React-Typesense-Movie-App/index.html",
+    "main.1c4880a5.css.map": "/React-Typesense-Movie-App/static/css/main.1c4880a5.css.map",
+    "main.a56421ff.js.map": "/React-Typesense-Movie-App/static/js/main.a56421ff.js.map",
+    "787.cfacd627.chunk.js.map": "/React-Typesense-Movie-App/static/js/787.cfacd627.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c4880a5.css",
+    "static/js/main.a56421ff.js"
+  ]
+}
