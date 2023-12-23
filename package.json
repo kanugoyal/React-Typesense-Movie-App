@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kanugoyal.github.io/React-Typesense-Movie-App",
   "name": "imdb-typesense",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "components": "^0.1.0",
     "dotenv": "^16.3.1",
+    "gh-pages": "^6.1.1",
     "instantsearch.css": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,6 +26,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
