@@ -13,7 +13,7 @@ This project was created to learn the fundamental functionalities of Elasticsear
 - Responsive Interface: Ensures compatibility across various screen sizes and devices.
 - Simple and Intuitive UI: Provides a user-friendly interface for search functionality.
 
-### Usage:
+### Usage: (https://kanugoyal.github.io/React-Typesense-Movie-App/)
 - Access the application via the provided URL after starting the development server.
 - Input search queries in the designated search bar.
 - Observe the real-time search results updating dynamically as you type.
