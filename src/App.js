@@ -1,6 +1,8 @@
-import logo from './logo.svg';
 import "./App.css";
-
+import React, { useState } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Switch } from "@mui/material"
 import styled from "styled-components";
 import {
   InstantSearch,
@@ -19,19 +21,58 @@ const AppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 1em 0;
+  position: relative;
+`;
+
+
+const ToggleDarkModeContainer = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const CustomH2 = styled.h2`
+  margin-top: 30px;
+  margin-bottom: 0;
 `;
 
 function App() {
+  const [toggleDarkMode, setToggleDarkMode] = useState(true);
+  const toggleDarkTheme = () => {
+    setToggleDarkMode(!toggleDarkMode);
+  };
+  const darkTheme = createTheme({
+    palette: {
+      mode: toggleDarkMode ? 'dark' : 'light', 
+      primary: {
+        main: '#484848',
+      },
+      secondary: {
+        main: '#f48fb1',
+      },
+    },
+  });
   return (
     <AppContainer>
-      <h2>React/Typesense Movies InstantSearch</h2>
-      <InstantSearch indexName="movies" searchClient={searchClient}>
-        <h4>Search Movies</h4>
-        <SearchBox />
-        <RefinementList attribute="genres" />
-        <MoviesHits />
-        <Pagination />
-      </InstantSearch>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <ToggleDarkModeContainer>
+        <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
+        <h6 style={{ margin: 0 }}>Toggle Dark mode</h6>
+        </ToggleDarkModeContainer>
+        <CustomH2>QuickView</CustomH2>
+        <h3 style={{ margin: 0 }}>Using React/Typesense InstantSearch</h3>
+        <InstantSearch indexName="movies" searchClient={searchClient}>
+          <h4>Search Movies</h4>
+          <SearchBox />
+          <RefinementList attribute="genres" />
+          <MoviesHits />
+          <Pagination totalPages={10} />
+        </InstantSearch>
+      </ThemeProvider>
     </AppContainer>
   );
 }

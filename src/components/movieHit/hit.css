@@ -1,0 +1,8 @@
+.card__runtime {
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+.card__rating {
+    float: right;
+}

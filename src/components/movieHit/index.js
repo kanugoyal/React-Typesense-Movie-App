@@ -1,3 +1,4 @@
+import "./hit.css";
 import React from "react";
 import { Highlight } from "react-instantsearch-dom";
 import styled from "styled-components";
@@ -38,20 +39,18 @@ const Rating = styled.b`
   margin-top: 1rem;
 `;
 
+const ReleaseDate = styled.b`
+  font-size: 16px;
+  color: #2ecc71;
+  margin-top: 1rem;
+`;
+
 const Genre = styled.div`
   font-size: 14px;
   color: #236adb;
   margin-top: 10px;
 `;
 
-const HitsContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
 
 export function MovieHit(props) {
   const { hit } = props;
@@ -62,9 +61,15 @@ export function MovieHit(props) {
       <Title>
         <MovieHighlight hit={hit} attribute="title" />
       </Title>
+      <Genre>
+      {hit?hit.genres:""}
+      </Genre>
       <Overview>
         <MovieHighlight hit={hit} attribute="overview" />
       </Overview>
+      <ReleaseDate>
+      {hit?hit.release_date:""}
+      </ReleaseDate>
       <Rating>
         <MovieHighlight hit={hit} attribute="vote_average" />
       </Rating>
