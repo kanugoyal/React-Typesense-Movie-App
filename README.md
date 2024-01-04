@@ -1,6 +1,6 @@
 ## React ElasticSearch InstantSearch
 
-### Motivation:
+#### Motivation:
 This project was created to learn the fundamental functionalities of Elasticsearch within a React application and specifically explore the real-time search capabilities using react-instantsearch. The primary motivation was to grasp how Elasticsearch performs search operations efficiently and promptly as the user types, and to understand the integration process of Elasticsearch in a React environment.
 
 ### Tech Description:
